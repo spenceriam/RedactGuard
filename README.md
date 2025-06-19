@@ -1,7 +1,7 @@
-# Privacy Shield Chrome Extension
+# RedactGuard
 
 ## Overview
-Privacy Shield is a Chrome extension that automatically detects and redacts sensitive information in screenshots. It features an Apple-like user interface and provides comprehensive privacy protection for various types of sensitive data.
+ReadactGuard is a Chrome extension that automatically detects and redacts sensitive information in screenshots. It features an Apple-like user interface and provides comprehensive privacy protection for various types of sensitive data.
 
 ## Features
 
@@ -44,11 +44,11 @@ Privacy Shield is a Chrome extension that automatically detects and redacts sens
 2. Open Chrome and navigate to `chrome://extensions/`
 3. Enable "Developer mode" in the top right
 4. Click "Load unpacked" and select the extension directory
-5. The Privacy Shield icon should appear in your toolbar
+5. The RedactGuard icon should appear in your toolbar
 
 ### For Testing
 1. Navigate to the included `test-page.html` file
-2. Click the Privacy Shield extension icon
+2. Click the RedactGuard extension icon
 3. Click "Capture Screenshot"
 4. Review the detection results and redacted image
 
