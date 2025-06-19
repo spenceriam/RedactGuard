@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Shield</title>
+    <link rel="stylesheet" href="css/apple-theme.css">
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="app-icon">🛡️</div>
+                <h1 class="app-title">Privacy Shield</h1>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Capture Section -->
+            <section class="capture-section">
+                <button id="captureBtn" class="primary-button">
+                    <span class="button-icon">📸</span>
+                    <span class="button-text">Capture Screenshot</span>
+                </button>
+            </section>
+
+            <!-- Results Section -->
+            <section id="resultsSection" class="results-section hidden">
+                <!-- Screenshot Preview -->
+                <div class="screenshot-preview">
+                    <div class="preview-header">
+                        <h3 class="section-title">Screenshot Preview</h3>
+                        <button id="downloadBtn" class="secondary-button">
+                            <span class="button-icon">⬇️</span>
+                            <span class="button-text">Download</span>
+                        </button>
+                    </div>
+                    <div class="preview-container">
+                        <img id="screenshotImg" class="screenshot-image" alt="Screenshot preview">
+                    </div>
+                </div>
+
+                <!-- Detection Summary -->
+                <div class="detection-summary">
+                    <h3 class="section-title">Detection Summary</h3>
+                    <div class="summary-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon success">✓</div>
+                            <div class="stat-content">
+                                <div class="stat-number" id="detectedCount">0</div>
+                                <div class="stat-label">Items Detected</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon warning">⚫</div>
+                            <div class="stat-content">
+                                <div class="stat-number" id="redactedCount">0</div>
+                                <div class="stat-label">Areas Redacted</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detection Details -->
+                <div class="detection-details">
+                    <h3 class="section-title">Detected Information</h3>
+                    <div id="detectionList" class="detection-list">
+                        <!-- Detection items will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Clarification Section -->
+                <div id="clarificationSection" class="clarification-section hidden">
+                    <h3 class="section-title">Need Clarification</h3>
+                    <div class="clarification-content">
+                        <p class="clarification-text">We found some text that might be sensitive but couldn't determine with certainty. Please review:</p>
+                        <div id="clarificationList" class="clarification-list">
+                            <!-- Clarification items will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading State -->
+            <section id="loadingSection" class="loading-section hidden">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">Analyzing screenshot for sensitive information...</p>
+            </section>
+
+            <!-- Error State -->
+            <section id="errorSection" class="error-section hidden">
+                <div class="error-icon">⚠️</div>
+                <h3 class="error-title">Something went wrong</h3>
+                <p class="error-message" id="errorMessage">Unable to capture screenshot. Please try again.</p>
+                <button id="retryBtn" class="primary-button">Try Again</button>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text">Your privacy is protected</p>
+        </footer>
+    </div>
+
+    <script src="js/popup.js"></script>
+</body>
+</html>
+
