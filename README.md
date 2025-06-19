@@ -54,7 +54,7 @@ Privacy Shield is a Chrome extension that automatically detects and redacts sens
 
 ## File Structure
 ```
-chrome-extension-project/
+RedactGuard/
 ├── manifest.json              # Extension configuration
 ├── popup.html                 # Main popup interface
 ├── background.js              # Service worker
